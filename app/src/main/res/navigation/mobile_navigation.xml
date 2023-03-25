@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="aleeha.com.example.transire.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_rooms"
+        android:name="aleeha.com.example.transire.ui.rooms.RoomsFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_rooms" />
+
+    <fragment
+        android:id="@+id/nav_location"
+        android:name="aleeha.com.example.transire.ui.location.LocationFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_location" />
+
+    <fragment
+        android:id="@+id/nav_facilities"
+        android:name="aleeha.com.example.transire.ui.facilities.FacilitiesFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_facilities" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="aleeha.com.example.transire.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="aleeha.com.example.transire.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>

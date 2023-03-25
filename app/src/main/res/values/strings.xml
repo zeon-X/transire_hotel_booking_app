@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Transire</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Milas Baguio Transient House</string>
+    <string name="nav_header_subtitle">Milas@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_rooms">Rooms</string>
+    <string name="menu_location">Location</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_facilities">Facilities</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_my_booking">My Booking</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_about_us">About Us</string>
+
+    <string name="menu_slideshow">slideshow</string>
+
+
+    <string name="home_card_palace_name">Milas Baguio Transient House</string>
+    <string name="home_card_location">285 Suello Village, Marcos Highway</string>
+    <string name="home_card_email">Milas@gmail.com</string>
+    <string name="home_card_phone">+639515408978</string>
+
+
+    <string name="facilities_introduction">Welcome to our hotel app, where you can explore all the amenities and room facilities we offer to ensure a comfortable and relaxing stay for our guests. We understand that a good nights sleep is crucial for a pleasant stay, which is why we provide high-quality bedding, clean sheets, fluffy pillows, and warm blankets in all our rooms. Additionally, our rooms are equipped with a range of modern facilities to cater to your needs, such as air conditioning/heating, TV, Wi-Fi, and a private bathroom with toiletries. Our goal is to provide a memorable and enjoyable experience for all our guests, and we hope that our room facilities will exceed your expectations.</string>
+    <string name="facilities_details">Facilities Details</string>
+
+    <string name="about_us_version">1.0.0</string>
+    <string name="about_us_company">Milas</string>
+    <string name="about_us_email">Milas@gmail.com</string>
+    <string name="about_us_website">www.Milas.com</string>
+    <string name="about_us_contact">+639515408978</string>
+
+    <string name="about_us_app_info">Our hotel app is designed to make booking your next vacation or business trip a breeze. With easy-to-use features, you can search for hotels by location, amenities, and price range. Our app provides you with detailed hotel descriptions, photos, and reviews from previous guests, helping you make an informed decision. Plus, you can access exclusive deals and discounts and manage your bookings directly through the app. So why wait? Book our hotel app today and start planning your next amazing trip!</string>
+
+    <string name="contact_us_select">Select Contact Subject</string>
+    <string-array name="contact_us_dropdown">
+        <item>Select Contact Subject</item>
+        <item>Others</item>
+        <item>Food</item>
+        <item>Services</item>
+        <item>Cleaning</item>
+    </string-array>
+
+
+    <string name="sample_room_name">Exclusive the luxury hotel rooms</string>
+    <string name="sample_room_about">The room was small and cozy, with a single window overlooking the garden. The walls were painted in a soothing shade of blue, and a comfortable armchair was placed in the corner. A bookshelf filled with books and a small desk completed the space, making it perfect for reading and relaxation.</string>
+
+    <string name="room_amenities">Room Amenities</string>
+    <string name="room_rules">Room Rules</string>
+    <string-array name="room_amenities_points">
+        <item>Single/Double Bed</item>
+        <item>Linens and pillows</item>
+        <item>Bath towels, hand towels, and washcloths</item>
+        <item>Bathroom with a toilet, sink, and shower</item>
+        <item>Soap, shampoo, conditioner</item>
+        <item>Hairdryer </item>
+        <item>Television with satellite channels</item>
+        <item>Internet access</item>
+        <item>Telephone </item>
+        <item>Desk and chair </item>
+        <item>Mini fridge</item>
+        <item>Coffee/tea maker</item>
+        <item>Iron and ironing board</item>
+        <item>Safe Lock</item>
+        <item>Air conditioning/heating</item>
+    </string-array>
+    <string name="room_rules_cop">Room Rules</string>
+    <string name="room_rules_ceb">Room Rules</string>
+    <string name="room_rules_addInfo">Room Rules</string>
+
+
+    <string-array name="booking_dropdown">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
