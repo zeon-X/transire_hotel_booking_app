@@ -9,11 +9,13 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_rooms">Rooms</string>
+    <string name="menu_room_details">Room Details</string>
     <string name="menu_location">Location</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_facilities">Facilities</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_my_booking">My Booking</string>
+    <string name="menu_room_booking">Room Booking</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_contact_us">Contact Us</string>
     <string name="menu_about_us">About Us</string>
@@ -75,7 +77,7 @@
     <string name="room_rules_addInfo">Room Rules</string>
 
 
-    <string-array name="booking_dropdown">
+    <string-array name="adult_child_booking_dropdown">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -87,6 +89,25 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
+    </string-array>
+
+
+    <string-array name="room_names">
+        <item>Exclusive Transient House rooms</item>
+        <item>Exclusive Transient House Living room</item>
+        <item>Deluxe Transient Master Bedroom</item>
+        <item>Aesthetic Bunkbed Futuristic Transient Rooms</item>
+    </string-array>
+
+
+    <string-array name="gallery_card_names">
+        <item>Milas Baguio Transient House</item>
+        <item>Exclusive Transient House rooms</item>
+        <item>Exclusive Transient House Living room</item>
+        <item>Aesthetic Bunkbed Futuristic Transient Rooms </item>
+        <item>Luxurious Transient Bunkbed for 2-5 packs</item>
+        <item>Omni premium transient Rooms</item>
+
     </string-array>
 
 

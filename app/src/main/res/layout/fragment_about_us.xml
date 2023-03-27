@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/bg_grey"
     tools:context=".ui.aboutus.AboutUsFragment">
 
 
@@ -62,7 +61,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Version"
-                            android:textColor="@color/black"
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
@@ -70,7 +68,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/about_us_version"
-                            android:textColor="@color/black"
                             android:textSize="16dp" />
                     </LinearLayout>
 
@@ -123,7 +120,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Company"
-                            android:textColor="@color/black"
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
@@ -131,7 +127,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/about_us_company"
-                            android:textColor="@color/black"
                             android:textSize="16dp" />
                     </LinearLayout>
 
@@ -184,7 +179,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Email"
-                            android:textColor="@color/black"
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
@@ -192,7 +186,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/about_us_email"
-                            android:textColor="@color/black"
                             android:textSize="16dp" />
                     </LinearLayout>
 
@@ -245,7 +238,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Website"
-                            android:textColor="@color/black"
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
@@ -253,7 +245,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/about_us_website"
-                            android:textColor="@color/black"
                             android:textSize="16dp" />
                     </LinearLayout>
 
@@ -306,7 +297,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Contact Us"
-                            android:textColor="@color/black"
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
@@ -314,7 +304,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/about_us_contact"
-                            android:textColor="@color/black"
                             android:textSize="16dp" />
                     </LinearLayout>
 

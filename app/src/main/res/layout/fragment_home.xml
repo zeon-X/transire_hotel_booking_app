@@ -5,16 +5,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_grey"
     tools:context=".ui.home.HomeFragment">
 
 <!-- CAROSUL IMAGES -->
-    <ImageView
+    <View
         android:id="@+id/iv_carousel"
         android:layout_width="match_parent"
-        android:layout_height="308dp"
+        android:layout_height="286dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/carousel2" />
+        android:background="@drawable/carousel2" />
 <!-- HOTEL INFO-->
 
 
@@ -23,7 +22,6 @@
         android:layout_marginHorizontal="8dp"
         app:cardCornerRadius="8dp"
         app:cardUseCompatPadding="true"
-        app:cardBackgroundColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
@@ -35,9 +33,8 @@
 
             <TextView
                 android:id="@+id/tv_home_card_place_name"
-                android:textSize="20dp"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="@color/text_grey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/home_card_palace_name" />
@@ -58,7 +55,7 @@
 
                 <TextView
                     android:id="@+id/tv_home_card_location"
-                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="11"
@@ -81,7 +78,7 @@
 
                 <TextView
                     android:id="@+id/tv_home_card_email"
-                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="11"
@@ -103,7 +100,7 @@
 
                 <TextView
                     android:id="@+id/tv_home_card_phone"
-                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="11"
@@ -117,6 +114,7 @@
 <!--HOTEL CARD CONTENTS-->
     <LinearLayout
         android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -130,7 +128,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_weight="4"
                 app:cardUseCompatPadding="true"
-                android:layout_margin="4dp"
+                android:layout_margin="2dp"
                 app:cardCornerRadius="8dp"
                 android:layout_width="0dp"
                 app:cardBackgroundColor="@color/card_rooms"
@@ -138,7 +136,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/card_rooms"
+                    android:id="@+id/ll_btn_rooms"
                     android:padding="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -165,7 +163,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_weight="4"
                 app:cardUseCompatPadding="true"
-                android:layout_margin="4dp"
+                android:layout_margin="2dp"
                 app:cardCornerRadius="8dp"
                 android:layout_width="0dp"
                 app:cardBackgroundColor="@color/card_location"
@@ -173,7 +171,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/card_location"
+                    android:id="@+id/ll_btn_location"
                     android:padding="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -200,7 +198,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_weight="4"
                 app:cardUseCompatPadding="true"
-                android:layout_margin="4dp"
+                android:layout_margin="2dp"
                 app:cardCornerRadius="8dp"
                 android:layout_width="0dp"
                 app:cardBackgroundColor="@color/card_facilities"
@@ -208,7 +206,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/card_facilities"
+                    android:id="@+id/ll_btn_facilities"
                     android:padding="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -244,7 +242,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_weight="4"
                 app:cardUseCompatPadding="true"
-                android:layout_margin="4dp"
+                android:layout_margin="2dp"
                 app:cardCornerRadius="8dp"
                 android:layout_width="0dp"
                 app:cardBackgroundColor="@color/card_gallery"
@@ -252,7 +250,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/card_gallery"
+                    android:id="@+id/ll_btn_gallery"
                     android:padding="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -279,7 +277,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_weight="4"
                 app:cardUseCompatPadding="true"
-                android:layout_margin="4dp"
+                android:layout_margin="2dp"
                 app:cardCornerRadius="8dp"
                 android:layout_width="0dp"
                 app:cardBackgroundColor="@color/card_contact_us"
@@ -287,7 +285,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/card_contact_us"
+                    android:id="@+id/ll_btn_contact_us"
                     android:padding="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -314,7 +312,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_weight="4"
                 app:cardUseCompatPadding="true"
-                android:layout_margin="4dp"
+                android:layout_margin="2dp"
                 app:cardCornerRadius="8dp"
                 android:layout_width="0dp"
                 app:cardBackgroundColor="@color/card_about_us"
@@ -322,7 +320,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/card_about_us"
+                    android:id="@+id/ll_btn_about_us"
                     android:padding="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

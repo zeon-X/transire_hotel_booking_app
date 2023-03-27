@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
 import aleeha.com.example.transire.R;
 
@@ -25,6 +29,10 @@ public class BookingFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    String[] adultChileNumber;
+    private AutoCompleteTextView autoCompleteTextViewAdult, autoCompleteTextViewChild;
+    ArrayAdapter<String>adapterItems;
 
     public BookingFragment() {
         // Required empty public constructor
@@ -61,6 +69,33 @@ public class BookingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_booking, container, false);
+        View view = inflater.inflate(R.layout.fragment_booking, container, false);
+
+        adultChileNumber = getResources().getStringArray(R.array.adult_child_booking_dropdown);
+        autoCompleteTextViewAdult = (AutoCompleteTextView) view.findViewById(R.id.act_booking_adult_dropdown);
+        autoCompleteTextViewChild = (AutoCompleteTextView) view.findViewById(R.id.act_booking_child_dropdown);
+
+        adapterItems = new ArrayAdapter<String>(getActivity(),R.layout.dropdown_list_item,adultChileNumber);
+
+        autoCompleteTextViewAdult.setAdapter(adapterItems);
+        autoCompleteTextViewChild.setAdapter(adapterItems);
+
+        autoCompleteTextViewAdult.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String item = adapterView.getItemAtPosition(i).toString();
+                Toast.makeText(getActivity(), "Item: "+item, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        autoCompleteTextViewChild.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String item = adapterView.getItemAtPosition(i).toString();
+                Toast.makeText(getActivity(), "Item: "+item, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return view;
     }
 }
