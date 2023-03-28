@@ -19,7 +19,7 @@
     <string name="menu_setting">Setting</string>
     <string name="menu_contact_us">Contact Us</string>
     <string name="menu_about_us">About Us</string>
-
+    <string name="menu_logout">Logout</string>
     <string name="menu_slideshow">slideshow</string>
 
 
@@ -116,7 +116,6 @@
         <item>Luxurious Transient Bunkbed for 2-5 packs</item>
         <item>Omni premium transient Rooms</item>
     </string-array>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->
