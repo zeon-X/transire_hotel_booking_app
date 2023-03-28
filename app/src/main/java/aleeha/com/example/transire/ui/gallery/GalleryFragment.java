@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import aleeha.com.example.transire.R;
 import aleeha.com.example.transire.databinding.FragmentGalleryBinding;
+import aleeha.com.example.transire.ui.rooms.RoomCardContainerAdapter;
 
 public class GalleryFragment extends Fragment {
 
@@ -49,6 +51,13 @@ public class GalleryFragment extends Fragment {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(),2,GridLayoutManager.VERTICAL,false);
         RV_gallery_card_container.setLayoutManager(gridLayoutManager);
         RV_gallery_card_container.setAdapter(galleryCardAdapter);
+
+        galleryCardAdapter.setOnItemClickListener(new GalleryCardAdapter.ClickListener() {
+            @Override
+            public void onItemClick(int position, View view) {
+                Toast.makeText(getContext(), galleryCardNames[position], Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     //    @Override

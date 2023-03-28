@@ -9,9 +9,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <View
+            android:id="@+id/view_room_details_image"
             android:layout_width="match_parent"
             android:layout_height="226dp"
             android:background="@drawable/carousel2" />
@@ -20,13 +21,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:padding="12dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -35,7 +38,7 @@
                     android:padding="12dp">
 
                     <TextView
-                        android:id="@+id/tv_room_name"
+                        android:id="@+id/tv_room_details_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/sample_room_name"
@@ -51,7 +54,7 @@
                         android:weightSum="12">
 
                         <RatingBar
-                            android:id="@+id/rb_room_rating"
+                            android:id="@+id/rb_room_details_rating"
                             style="?android:attr/ratingBarStyleSmall"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -63,7 +66,7 @@
                             android:stepSize="1" />
 
                         <TextView
-                            android:id="@+id/tv_rating_count"
+                            android:id="@+id/tv_tv_room_details_rating_count"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
@@ -117,7 +120,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/tv_room_price"
+                                    android:id="@+id/tv_room_details_price"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="5"
@@ -129,8 +132,8 @@
                         </androidx.cardview.widget.CardView>
 
                         <Button
-
-                            android:id="@+id/button"
+                            android:textColor="@color/white"
+                            android:id="@+id/btn_book_now"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="6dp"
@@ -139,7 +142,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/tv_room_details_intro"
                         android:layout_marginVertical="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -152,7 +155,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp">
+                android:layout_marginVertical="16dp"
+                app:cardCornerRadius="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -179,11 +183,12 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp" >
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="12dp">
 

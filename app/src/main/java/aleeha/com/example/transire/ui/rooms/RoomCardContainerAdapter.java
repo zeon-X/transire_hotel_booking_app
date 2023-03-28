@@ -15,6 +15,7 @@ import aleeha.com.example.transire.R;
 
 public class RoomCardContainerAdapter extends RecyclerView.Adapter<RoomCardContainerAdapter.MyViewHolder> {
 
+    private static ClickListener clicklistener;
     Context context;
     String [] roomName;
     int [] roomPrice, roomRatingCount, roomRating;
@@ -55,7 +56,7 @@ public class RoomCardContainerAdapter extends RecyclerView.Adapter<RoomCardConta
         return roomName.length;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tv_roomName, tv_roomPrice, tv_roomRatingCount;
         RatingBar rb_roomRating;
         View v_roomImage;
@@ -67,6 +68,22 @@ public class RoomCardContainerAdapter extends RecyclerView.Adapter<RoomCardConta
             tv_roomRatingCount = itemView.findViewById(R.id.tv_rating_count);
             rb_roomRating = itemView.findViewById(R.id.rb_room_rating);
             v_roomImage = itemView.findViewById(R.id.view_room_card_img);
+
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            clicklistener.onItemClick(getAdapterPosition(),view);
+        }
+    }
+
+    // implementing interface
+    public interface ClickListener{
+        void onItemClick(int position, View view);
+    }
+
+    public void setOnItemClickListener(ClickListener clickListener){
+        RoomCardContainerAdapter.clicklistener = clickListener;
     }
 }

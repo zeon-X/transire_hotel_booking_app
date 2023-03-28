@@ -14,6 +14,7 @@ import aleeha.com.example.transire.ui.rooms.RoomCardContainerAdapter;
 
 public class GalleryCardAdapter extends RecyclerView.Adapter<GalleryCardAdapter.MyViewHolder> {
 
+    private static ClickListener clicklistener;
     Context context;
     String[] galleryCardNames;
     int[] galleryCardImages;
@@ -44,13 +45,28 @@ public class GalleryCardAdapter extends RecyclerView.Adapter<GalleryCardAdapter.
         return galleryCardNames.length;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tv_roomName;
         View v_roomImage;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_roomName = itemView.findViewById(R.id.tv_gallery_card_name);
             v_roomImage = itemView.findViewById(R.id.v_gallery_card_img);
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            clicklistener.onItemClick(getAdapterPosition(),view);
+        }
+    }
+
+    // implementing interface
+    public interface ClickListener{
+        void onItemClick(int position, View view);
+    }
+
+    public void setOnItemClickListener(ClickListener clickListener){
+        GalleryCardAdapter.clicklistener = clickListener;
     }
 }

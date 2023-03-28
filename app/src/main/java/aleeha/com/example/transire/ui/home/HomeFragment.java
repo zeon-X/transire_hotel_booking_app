@@ -93,13 +93,7 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
 
-    private void switchToFragment(Fragment fragment) {
-        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.nav_host_fragment_content_main, fragment);
-        ft.addToBackStack(null);
-        ft.commit();
-    }
+
 
     private void navigateToFragment(int destinationId) {
         NavHostFragment navHostFragment = (NavHostFragment) requireActivity().getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_content_main);
