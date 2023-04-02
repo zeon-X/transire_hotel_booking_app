@@ -55,8 +55,9 @@
 
     <string name="room_amenities">Room Amenities</string>
     <string name="room_rules">Room Rules</string>
+
     <string-array name="room_amenities_points">
-        <item>Single/Double Bed</item>
+        <item>Single Double Bed</item>
         <item>Linens and pillows</item>
         <item>Bath towels, hand towels, and washcloths</item>
         <item>Bathroom with a toilet, sink, and shower</item>
@@ -72,6 +73,7 @@
         <item>Safe Lock</item>
         <item>Air conditioning/heating</item>
     </string-array>
+
     <string name="room_rules_cop">Room Rules</string>
     <string name="room_rules_ceb">Room Rules</string>
     <string name="room_rules_addInfo">Room Rules</string>

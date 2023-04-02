@@ -18,17 +18,15 @@
             android:background="@drawable/carousel2" />
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="6dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="6dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -114,8 +112,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="5"
                                     android:text="PHP"
-                                    android:textColor="@color/white"
                                     android:textAlignment="center"
+                                    android:textColor="@color/white"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -124,27 +122,27 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="5"
                                     android:text="2000"
-                                    android:textColor="@color/white"
                                     android:textAlignment="center"
+                                    android:textColor="@color/white"
                                     android:textStyle="bold" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
                         <Button
-                            android:textColor="@color/white"
                             android:id="@+id/btn_book_now"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="6dp"
                             android:layout_weight="6"
-                            android:text="Book Now" />
+                            android:text="Book Now"
+                            android:textColor="@color/white" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/tv_room_details_intro"
-                        android:layout_marginVertical="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
                         android:text="@string/sample_room_about" />
 
                 </LinearLayout>
@@ -165,23 +163,28 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/room_amenities"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="@string/room_amenities" />
+                        android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:id="@+id/ll_room_amenities"
-                        android:layout_marginTop="6dp"
+
+                    <ListView
+
+                        android:id="@+id/lv_room_amenities"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"></LinearLayout>
+                        android:layout_height="450dp"
+                        android:layout_marginTop="6dp"
+                        tools:listitem="@layout/list_room_amenities">
+
+                    </ListView>
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -193,9 +196,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
+                        android:text="@string/room_rules"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="@string/room_rules" />
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -217,9 +220,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_marginVertical="6dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="6dp"
                         android:orientation="horizontal">
 
                         <TextView
