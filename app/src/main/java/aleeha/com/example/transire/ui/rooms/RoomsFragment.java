@@ -48,10 +48,10 @@ public class RoomsFragment extends Fragment {
         R.drawable.room_container_1,R.drawable.room_container_2, R.drawable.room_container_3, R.drawable.room_container_4
     };
 
-    String[] CheckIn={"","","",""},
-            CheckOut={"","","",""},
-            LuggageStorage={"","","",""},
-            CancellationAndPrePayment=
+    String[] roomCheckIn={"14:00-22:00","14:00-22:00","14:00-22:00","14:00-22:00"},
+            roomCheckOut={"14:00-22:00","14:00-22:00","14:00-22:00","14:00-22:00"},
+            roomLuggageStorage={"14:00-22:00","14:00-22:00","14:00-22:00","14:00-22:00"},
+            roomCancellationAndPrePayment=
                     {
                             "•\tGuests must provide a minimum of 14 days notice for cancellation in order to receive a full refund.\n" +
                                     "•\tAny cancellations made within 14 days of the reservation date will result in a forfeiture of the prepayment.\n" +
@@ -65,7 +65,7 @@ public class RoomsFragment extends Fragment {
                                     " b. Guests will be charged the full amount of the reservation if they cancel within 24 hours of arrival. \n" +
                                     "c. Prepayment is required for all reservations.\n"
                     },
-            ChildrenAndExtraBed=
+            roomChildrenAndExtraBed=
                     {
                             "•\tChildren under the age of 12 stay for free.\n" +
                                     "•\tA maximum of two extra beds can be added to a room for an additional fee of 1000 peso per night.\n" +
@@ -80,7 +80,7 @@ public class RoomsFragment extends Fragment {
                                     " b. One extra bed can be provided upon request for an additional fee. \n" +
                                     "c. Baby cots are also available upon request.\n"
                     },
-            AdditionalInfo=
+            roomAdditionalInfo=
                     {
                             "•Smoking is not permitted anywhere on the property.\n" +
                                     "•\tPets are not allowed.\n" +
@@ -182,7 +182,9 @@ public class RoomsFragment extends Fragment {
             @Override
             public void onItemClick(int i, View view) {
 
-                Bundle bundle = getRoomDetailsBundle(roomName[i], roomIntro[i],roomPrice[i],roomRating[i],roomRatingCount[i],roomImage[i]);
+                Bundle bundle = getRoomDetailsBundle
+                        (roomName[i], roomIntro[i],roomPrice[i],roomRating[i],roomRatingCount[i],roomImage[i],
+                        roomCheckIn[i],roomCheckOut[i],roomLuggageStorage[i],roomCancellationAndPrePayment[i],roomChildrenAndExtraBed[i],roomAdditionalInfo[i] );
                 navigateToRoomDetailsWithData(getView(),bundle);
             }
         });
@@ -193,7 +195,10 @@ public class RoomsFragment extends Fragment {
         Navigation.findNavController(view).navigate(R.id.nav_room_details,data);
     }
 
-    public Bundle getRoomDetailsBundle(String param1, String param2, int param3, int param4, int param5, int param6 ){
+    public Bundle getRoomDetailsBundle
+            (String param1, String param2, int param3, int param4, int param5, int param6,
+             String param7,String param8,String param9,String param10,String param11,String param12  ){
+
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -202,6 +207,14 @@ public class RoomsFragment extends Fragment {
         args.putInt(ARG_PARAM4, param4);
         args.putInt(ARG_PARAM5, param5);
         args.putInt(ARG_PARAM6, param6);
+
+        args.putString(ARG_CheckIn, param7);
+        args.putString(ARG_CheckOut, param8);
+        args.putString(ARG_LuggageStorage, param9);
+        args.putString(ARG_CancellationAndPrePayment, param10);
+        args.putString(ARG_ChildrenAndExtraBed, param11);
+        args.putString(ARG_AdditionalInfo, param12);
+
         return args;
     }
 

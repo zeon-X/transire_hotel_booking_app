@@ -11,6 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import aleeha.com.example.transire.LoginActivity;
 import aleeha.com.example.transire.R;
@@ -23,6 +29,11 @@ import aleeha.com.example.transire.R;
 public class ProfileFragment extends Fragment {
 
     Button btn_logout,btn_update;
+    FirebaseAuth mAuth;
+    FirebaseUser user;
+
+    ImageView iv_user_img;
+    TextView tv_user_name;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,14 +48,6 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static ProfileFragment newInstance(String param1, String param2) {
         ProfileFragment fragment = new ProfileFragment();
@@ -72,10 +75,24 @@ public class ProfileFragment extends Fragment {
 
         btn_logout = (Button) view.findViewById(R.id.btn_logout);
         btn_update = (Button) view.findViewById(R.id.btn_update);
+        tv_user_name = (TextView) view.findViewById(R.id.tv_user_name);
+        iv_user_img = (ImageView) view.findViewById(R.id.iv_user_img);
+
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        if(user!=null){
+            //iv_user_img.setImageURI(user.getPhotoUrl());
+            tv_user_name.setText(user.getEmail());
+            //Toast.makeText(getActivity(), user.getDisplayName(), Toast.LENGTH_SHORT).show();
+        }
+
 
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                FirebaseAuth.getInstance().signOut();
+
                 Intent iLogin = new Intent(getActivity(), LoginActivity.class);
                 startActivity(iLogin);
                 getActivity().finish();

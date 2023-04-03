@@ -33,6 +33,8 @@ public class RoomDetailsFragment extends Fragment {
     View v_roomImage;
     ListView lv_room_amenities;
 
+    TextView tv_check_in, tv_check_out, tv_luggage_in,tv_cp,tv_ceb,tv_ai;
+
     ArrayAdapter<String> adapterItems;
     String[] roomAmenities;
 
@@ -73,12 +75,19 @@ public class RoomDetailsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_room_details, container, false);
         BTN_book_now =(Button) view.findViewById(R.id.btn_book_now);
-        tv_roomName = view.findViewById(R.id.tv_room_details_name);
-        tv_roomIntro = view.findViewById(R.id.tv_room_details_intro);
-        tv_roomPrice = view.findViewById(R.id.tv_room_details_price);
-        tv_roomRatingCount = view.findViewById(R.id.tv_tv_room_details_rating_count);
-        rb_roomRating = view.findViewById(R.id.rb_room_details_rating);
-        v_roomImage = view.findViewById(R.id.view_room_details_image);
+        tv_roomName =(TextView) view.findViewById(R.id.tv_room_details_name);
+        tv_roomIntro =(TextView) view.findViewById(R.id.tv_room_details_intro);
+        tv_roomPrice =(TextView) view.findViewById(R.id.tv_room_details_price);
+        tv_roomRatingCount =(TextView) view.findViewById(R.id.tv_tv_room_details_rating_count);
+        rb_roomRating =(RatingBar) view.findViewById(R.id.rb_room_details_rating);
+        v_roomImage =(View) view.findViewById(R.id.view_room_details_image);
+
+        tv_check_in = (TextView) view.findViewById(R.id.tv_check_in);
+        tv_check_out =(TextView) view.findViewById(R.id.tv_check_out);
+        tv_luggage_in =(TextView) view.findViewById(R.id.tv_luggage_in);
+        tv_cp =(TextView) view.findViewById(R.id.tv_cp);
+        tv_ceb =(TextView) view.findViewById(R.id.tv_ceb);
+        tv_ai =(TextView) view.findViewById(R.id.tv_ai);
 
         lv_room_amenities = (ListView) view.findViewById(R.id.lv_room_amenities);
 
@@ -98,6 +107,14 @@ public class RoomDetailsFragment extends Fragment {
             mParam4 = getArguments().getInt(ARG_PARAM4);
             mParam5 = getArguments().getInt(ARG_PARAM5);
             mParam6 = getArguments().getInt(ARG_PARAM6);
+
+            CheckIn = getArguments().getString(ARG_CheckIn);
+            CheckOut = getArguments().getString(ARG_CheckOut);
+            CancellationAndPrePayment = getArguments().getString(ARG_CancellationAndPrePayment);
+            ChildrenAndExtraBed = getArguments().getString(ARG_ChildrenAndExtraBed);
+            LuggageStorage = getArguments().getString(ARG_LuggageStorage);
+            AdditionalInfo = getArguments().getString(ARG_AdditionalInfo);
+
             // Do something with the data
             tv_roomName.setText(mParam1); // name
             tv_roomIntro.setText(mParam2); //room intro
@@ -105,6 +122,13 @@ public class RoomDetailsFragment extends Fragment {
             rb_roomRating.setRating(mParam4); // rating
             tv_roomRatingCount.setText("("+Integer.toString(mParam5)+")"); //rating count
             v_roomImage.setBackgroundResource(mParam6); //image
+
+            tv_check_in.setText(CheckIn);
+            tv_check_out.setText(CheckOut);
+            tv_luggage_in.setText(LuggageStorage);
+            tv_cp.setText(CancellationAndPrePayment);
+            tv_ceb.setText(ChildrenAndExtraBed);
+            tv_ai.setText(AdditionalInfo);
         }
 
         roomAmenities = getResources().getStringArray(R.array.room_amenities_points);

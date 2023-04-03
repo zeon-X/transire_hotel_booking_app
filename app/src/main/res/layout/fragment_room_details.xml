@@ -139,6 +139,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:textSize="16sp"
                         android:id="@+id/tv_room_details_intro"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -206,13 +207,16 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:textSize="18sp"
+                            android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Check in : " />
 
                         <TextView
-                            android:id="@+id/textView11"
+                            android:textSize="18sp"
+                            android:id="@+id/tv_check_in"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -226,13 +230,16 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:textSize="18sp"
+                            android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Check out : " />
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:textSize="18sp"
+                            android:id="@+id/tv_check_out"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -245,13 +252,16 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:textSize="18sp"
+                            android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Luggage Storage : " />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:textSize="18sp"
+                            android:id="@+id/tv_luggage_in"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -265,13 +275,16 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:textSize="18sp"
+                            android:textStyle="bold"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Cancellation/prepayment : " />
 
                         <TextView
-                            android:id="@+id/textView18"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_cp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/room_rules_cop" />
@@ -283,13 +296,16 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:textSize="18sp"
+                            android:textStyle="bold"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Children and Extra Beds : " />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_ceb"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/room_rules_ceb" />
@@ -302,13 +318,16 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:textSize="18sp"
+                            android:textStyle="bold"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Additional Info : " />
 
                         <TextView
-                            android:id="@+id/textView20"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_ai"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/room_rules_addInfo" />

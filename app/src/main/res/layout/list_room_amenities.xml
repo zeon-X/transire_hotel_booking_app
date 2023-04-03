@@ -15,6 +15,7 @@
         app:srcCompat="@drawable/ic_navigation" />
 
     <TextView
+        android:textSize="16sp"
         android:id="@+id/tv_amenities"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
