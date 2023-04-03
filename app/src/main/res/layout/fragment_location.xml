@@ -6,10 +6,18 @@
     android:orientation="vertical"
     tools:context=".ui.location.LocationFragment">
 
-    <View
+    <ProgressBar
+        android:visibility="gone"
+        android:padding="30dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/location_map_image"/>
+        android:id="@+id/wv_mapView"/>
 
 
 </LinearLayout>

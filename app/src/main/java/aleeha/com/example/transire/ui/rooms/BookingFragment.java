@@ -2,6 +2,7 @@ package aleeha.com.example.transire.ui.rooms;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Calendar;
 
 import aleeha.com.example.transire.LoginActivity;
@@ -38,6 +41,9 @@ public class BookingFragment extends Fragment {
 
     FirebaseAuth mAuth;
     FirebaseUser user;
+
+    LocalDate date1,date2;
+    int numOfDays=0;
 
     // TODO: Rename and change types of parameters
     private String RoomName;
@@ -94,6 +100,8 @@ public class BookingFragment extends Fragment {
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
 
 
+
+
         et_arrivalDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,9 +109,13 @@ public class BookingFragment extends Fragment {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         month = month+1;
-                        String date = dayOfMonth+"/"+month+"/"+year;
+                        String date = year+"/"+month+"/"+dayOfMonth;
                         CusArrivalDate = date;
                         et_arrivalDate.setText(date);
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            date1 = LocalDate.parse(date);
+                        }
                     }
                 },year, month,day);
                 dialog.show();
@@ -116,9 +128,23 @@ public class BookingFragment extends Fragment {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         month = month+1;
-                        String date = dayOfMonth+"/"+month+"/"+year;
+                        String date = year+"/"+month+"/"+dayOfMonth;
                         CusDepartureDate = date;
                         et_departureDate.setText(date);
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            date2 = LocalDate.parse(date);
+                        }
+
+                        Period age = null;
+
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                            age = Period.between(date1, date2);
+                            numOfDays += age.getYears()*365;
+                            numOfDays += age.getMonths()*30;
+                            numOfDays += age.getDays();
+                        }
+
                     }
                 },year, month,day);
                 dialog.show();
