@@ -142,7 +142,7 @@ public class BookingFragment extends Fragment {
                         CusArrivalDate = date;
                         et_arrivalDate.setText(date);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                            date1 = new Date(year,month,dayOfMonth);
+                            date1 = new Date(year-1900,month-1,dayOfMonth);
                         }
                     }
                 },year, month,day);
@@ -160,7 +160,7 @@ public class BookingFragment extends Fragment {
                         CusDepartureDate = date;
 
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                            date2 =  new Date(year,month,dayOfMonth);
+                            date2 =  new Date(year-1900,month-1,dayOfMonth);
                         }
                         long dateBeforeInMs = date1.getTime();
                         long dateAfterInMs = date2.getTime();
@@ -229,8 +229,8 @@ public class BookingFragment extends Fragment {
                 booking_data.put("adult", Integer.parseInt(CusNoAdult));
                 booking_data.put("child", Integer.parseInt(CusNoChild));
 
-                booking_data.put("arrival", date1);
-                booking_data.put("departure", date2);
+                booking_data.put("arrival", CusArrivalDate);
+                booking_data.put("departure", CusDepartureDate);
 
                 booking_data.put("room_name", RoomName);
                 booking_data.put("room_price", RoomPrice);
