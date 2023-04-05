@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +21,7 @@ import aleeha.com.example.transire.ui.rooms.RoomCardContainerAdapter;
 
 public class GalleryFragment extends Fragment {
 
-//    private FragmentGalleryBinding binding;
+private static final String ARG_RoomNo = "RoomNo";
 
     String[] galleryCardNames;
     int[] galleryCardImages={
@@ -32,8 +33,6 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.fragment_gallery, container, false);
-
-
         return view;
     }
 
@@ -56,14 +55,18 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onItemClick(int position, View view) {
                 Toast.makeText(getContext(), galleryCardNames[position], Toast.LENGTH_SHORT).show();
+                navigateToGalleryScrollViewWithData(getView(),getGalleryScrollViewBundle(position));
             }
         });
     }
 
-    //    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        binding = null;
-//    }
+    public void navigateToGalleryScrollViewWithData(View view, Bundle data) {
+        Navigation.findNavController(view).navigate(R.id.nav_gallery_scroll_view,data);
+    }
 
+    public Bundle getGalleryScrollViewBundle(int param1 ){
+        Bundle args = new Bundle();
+        args.putInt(ARG_RoomNo, param1);
+        return args;
+    }
 }

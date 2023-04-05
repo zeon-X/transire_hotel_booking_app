@@ -83,6 +83,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="number"
                     android:id="@+id/et_customerPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

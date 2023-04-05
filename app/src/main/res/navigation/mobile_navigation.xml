@@ -37,6 +37,13 @@
     </fragment>
 
     <fragment
+        android:id="@+id/nav_gallery_scroll_view"
+        android:name="aleeha.com.example.transire.ui.gallery.GalleryScrollViewFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery_scroll_view" >
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_slideshow"
         android:name="aleeha.com.example.transire.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"

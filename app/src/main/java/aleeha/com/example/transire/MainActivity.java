@@ -43,9 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_location,
                 R.id.nav_facilities,
                 R.id.nav_gallery,
-                R.id.nav_profile,
                 R.id.nav_my_booking,
-                R.id.nav_setting)
+                R.id.nav_profile)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

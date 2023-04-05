@@ -17,7 +17,6 @@
         android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:id="@+id/ll_profile_page"
         android:layout_width="match_parent"
         android:layout_height="226dp"
         android:gravity="center"
@@ -37,10 +36,11 @@
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="User Name" />
+            android:text="No User" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_profile_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="30dp"
@@ -110,5 +110,40 @@
                 android:text="Logout"
                 android:textColor="@color/white"/>
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_go_log_reg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="27"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_weight="13"
+                android:text="Login"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_weight="13"
+                android:text="Register"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

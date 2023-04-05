@@ -5,11 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.contactus.ContactUsFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:id="@+id/progressBar_contact_us"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
+            android:id="@+id/ll_contact_us_page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp"
             android:gravity="center_horizontal"
             android:orientation="vertical" >
 
@@ -106,6 +120,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -119,6 +134,8 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="number"
+                    android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -132,6 +149,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -165,6 +183,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
@@ -187,5 +206,9 @@
 
 
         </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </ScrollView>

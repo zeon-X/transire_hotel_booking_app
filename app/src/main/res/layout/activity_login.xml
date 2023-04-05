@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
+    android:background="@drawable/bg_log_reg"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -30,11 +31,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Welcome Back"
+                android:textColor="@color/white"
                 android:textSize="28sp"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_marginBottom="100dp"
                 android:text="Sign in to continue"
                 android:textStyle="bold" />
@@ -48,9 +51,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:hint="Email"
+                app:hintTextColor="@color/white"
+                app:boxBackgroundColor="@color/bg_facilities"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:textColor="@color/white"
                     android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -59,13 +65,17 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
+                app:hintTextColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:hint="Password"
+                app:boxBackgroundColor="@color/bg_facilities"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
                     android:id="@+id/et_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -104,11 +114,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
+                android:textColor="@color/white"
                 android:text="Forget Password?"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="40dp"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
 
             <LinearLayout
@@ -188,19 +199,12 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="6dp"
-                    android:text="Don't you Have an Account yet?"
-                    android:textSize="17sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/tv_register_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Register"
-                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:text="Don't you Have an Account yet? Register"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 

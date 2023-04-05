@@ -29,7 +29,7 @@
     <string name="home_card_phone">+639515408978</string>
 
 
-    <string name="facilities_introduction">Welcome to our hotel app, where you can explore all the amenities and room facilities we offer to ensure a comfortable and relaxing stay for our guests. We understand that a good nights sleep is crucial for a pleasant stay, which is why we provide high-quality bedding, clean sheets, fluffy pillows, and warm blankets in all our rooms. Additionally, our rooms are equipped with a range of modern facilities to cater to your needs, such as air conditioning/heating, TV, Wi-Fi, and a private bathroom with toiletries. Our goal is to provide a memorable and enjoyable experience for all our guests, and we hope that our room facilities will exceed your expectations.</string>
+    <string name="facilities_introduction">Welcome to our transire app, where you can explore all the amenities and room facilities we offer to ensure a comfortable and relaxing stay for our guests. We understand that a good nights sleep is crucial for a pleasant stay, which is why we provide high-quality bedding, clean sheets, fluffy pillows, and warm blankets in all our rooms. Additionally, our rooms are equipped with a range of modern facilities to cater to your needs, such as air conditioning/heating, TV, Wi-Fi, and a private bathroom with toiletries. Our goal is to provide a memorable and enjoyable experience for all our guests, and we hope that our room facilities will exceed your expectations.</string>
     <string name="facilities_details">Facilities Details</string>
 
     <string name="about_us_version">1.0.0</string>
@@ -38,7 +38,7 @@
     <string name="about_us_website">www.Milas.com</string>
     <string name="about_us_contact">+639515408978</string>
 
-    <string name="about_us_app_info">Our hotel app is designed to make booking your next vacation or business trip a breeze. With easy-to-use features, you can search for hotels by location, amenities, and price range. Our app provides you with detailed hotel descriptions, photos, and reviews from previous guests, helping you make an informed decision. Plus, you can access exclusive deals and discounts and manage your bookings directly through the app. So why wait? Book our hotel app today and start planning your next amazing trip!</string>
+    <string name="about_us_app_info">Our Transire app is designed to make booking your next vacation or business trip a breeze. With easy-to-use features, you can search for hotels by location, amenities, and price range. Our app provides you with detailed hotel descriptions, photos, and reviews from previous guests, helping you make an informed decision. Plus, you can access exclusive deals and discounts and manage your bookings directly through the app. So why wait? Book our hotel app today and start planning your next amazing trip!</string>
 
     <string name="contact_us_select">Select Contact Subject</string>
     <string-array name="contact_us_dropdown">

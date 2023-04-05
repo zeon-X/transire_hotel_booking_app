@@ -30,6 +30,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 import aleeha.com.example.transire.LoginActivity;
 import aleeha.com.example.transire.R;
@@ -45,32 +46,28 @@ public class MyBookingFragment extends Fragment {
     FirebaseAuth mAuth;
     FirebaseUser user;
 
-    ArrayList<String>
-            roomName = new ArrayList<String>(),
-            arrivalDate = new ArrayList<String>(),
-            departureDate = new ArrayList<String>(),
-            price = new ArrayList<String>();
+    ArrayList<String>roomName = new ArrayList<String>();
+    ArrayList<String> arrivalDate = new ArrayList<String>();
+    ArrayList<String> departureDate = new ArrayList<String>();
+    ArrayList<String> price = new ArrayList<String>();
 
 
     public MyBookingFragment() {}
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_my_booking, container, false);
         rv_my_booking = (RecyclerView) view.findViewById(R.id.rv_my_booking);
-        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar_my_booking);
 
         progressBar.setVisibility(View.VISIBLE);
         rv_my_booking.setVisibility(View.GONE);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
-        String user_email = "";
+        String user_email = "emailNotFound";
         if(user!=null){
             user_email = user.getEmail();
         }
@@ -81,40 +78,34 @@ public class MyBookingFragment extends Fragment {
             getActivity().finish();
         }
 
-        if(TextUtils.isEmpty(user_email)){
-            user_email="emailNotFound";
-            Toast.makeText(getActivity(), "Login Again Please", Toast.LENGTH_SHORT).show();
-            Intent iLogin = new Intent(getActivity(), LoginActivity.class);
-            startActivity(iLogin);
-            getActivity().finish();
-        }
-
         db.collection("transient_user_data").document(user_email).collection("booking")
-                .get(Source.CACHE)
+                .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
+                        if(task.isSuccessful()) {
+                            Toast.makeText(getActivity(), "My Booking", Toast.LENGTH_SHORT).show();
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 roomName.add(document.get("room_name").toString());
                                 arrivalDate.add(document.get("arrival").toString());
                                 departureDate.add(document.get("departure").toString());
                                 price.add(document.get("total_price").toString());
                             }
-                            progressBar.setVisibility(View.GONE);
-                            rv_my_booking.setVisibility(View.VISIBLE);
                         } else {
-                            Log.d("my_booking_data_error", "Error getting documents: ", task.getException());
+                            //Log.d("my_booking_data_error", "Error getting documents: ", task.getException());
                             Toast.makeText(getActivity(), "Error getting documents", Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
-                            rv_my_booking.setVisibility(View.VISIBLE);
                         }
+                        progressBar.setVisibility(View.GONE);
+                        rv_my_booking.setVisibility(View.VISIBLE);
                     }
                 });
+
 
         MyBookingAdapter myBookingAdapter = new MyBookingAdapter(getActivity(),roomName,arrivalDate,departureDate,price);
         rv_my_booking.setAdapter(myBookingAdapter);
         rv_my_booking.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
 
         return view;
     }
