@@ -53,14 +53,15 @@
                         <RatingBar
                             android:id="@+id/rb_room_details_rating"
                             style="?android:attr/ratingBarStyleSmall"
+                            android:progressTint="@color/rating_yellow"
+                            android:rating="6"
+                            android:stepSize="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="8"
                             android:max="5"
                             android:numStars="5"
-                            android:progressTint="@color/rating_yellow"
-                            android:rating="4"
-                            android:stepSize="1" />
+                             />
 
                         <TextView
                             android:id="@+id/tv_tv_room_details_rating_count"
@@ -71,7 +72,7 @@
                             android:textAlignment="center" />
 
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/iv_btn_review_dialog"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

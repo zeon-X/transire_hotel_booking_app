@@ -1,5 +1,7 @@
 package aleeha.com.example.transire.ui.rooms;
 
+import android.app.Dialog;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
@@ -32,8 +35,10 @@ public class RoomDetailsFragment extends Fragment {
     RatingBar rb_roomRating;
     View v_roomImage;
     ListView lv_room_amenities;
+    ImageView iv_btn_review_dialog;
 
     TextView tv_check_in, tv_check_out, tv_luggage_in,tv_cp,tv_ceb,tv_ai;
+    Button btn_submit_review;
 
     ArrayAdapter<String> adapterItems;
     String[] roomAmenities;
@@ -81,6 +86,7 @@ public class RoomDetailsFragment extends Fragment {
         tv_roomRatingCount =(TextView) view.findViewById(R.id.tv_tv_room_details_rating_count);
         rb_roomRating =(RatingBar) view.findViewById(R.id.rb_room_details_rating);
         v_roomImage =(View) view.findViewById(R.id.view_room_details_image);
+        iv_btn_review_dialog = (ImageView) view.findViewById(R.id.iv_btn_review_dialog);
 
         tv_check_in = (TextView) view.findViewById(R.id.tv_check_in);
         tv_check_out =(TextView) view.findViewById(R.id.tv_check_out);
@@ -139,6 +145,28 @@ public class RoomDetailsFragment extends Fragment {
         }
         RoomAmenitiesAdapter roomAmenitiesAdapter = new RoomAmenitiesAdapter(getActivity(),roomAmenitiesPoints);
         lv_room_amenities.setAdapter(roomAmenitiesAdapter);
+
+        //DIALOG
+        Dialog reviewDialog = new Dialog(getActivity());
+        reviewDialog.setContentView(R.layout.review_dialog);
+        reviewDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        btn_submit_review = reviewDialog.findViewById(R.id.btn_submit_review);
+
+
+        iv_btn_review_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reviewDialog.show();
+            }
+        });
+
+        btn_submit_review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Review Added Successfully", Toast.LENGTH_SHORT).show();
+                reviewDialog.dismiss();
+            }
+        });
 
         return view;
     }
