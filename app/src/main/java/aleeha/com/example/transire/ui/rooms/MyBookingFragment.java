@@ -33,6 +33,7 @@ import java.util.Date;
 import java.util.Objects;
 
 import aleeha.com.example.transire.LoginActivity;
+import aleeha.com.example.transire.MainActivity;
 import aleeha.com.example.transire.R;
 import io.grpc.okhttp.internal.Util;
 
@@ -68,6 +69,7 @@ public class MyBookingFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
         String user_email = "emailNotFound";
+
         if(user!=null){
             user_email = user.getEmail();
         }
@@ -75,7 +77,6 @@ public class MyBookingFragment extends Fragment {
             Toast.makeText(getActivity(), "Login Required", Toast.LENGTH_SHORT).show();
             Intent iLogin = new Intent(getActivity(), LoginActivity.class);
             startActivity(iLogin);
-            getActivity().finish();
         }
 
         db.collection("transient_user_data").document(user_email).collection("booking")
