@@ -1,9 +1,12 @@
 # transire_hotel_booking_app
 
-welcome to our hotel booking app repository! This app is built using Android Studio and Firebase, providing users with a seamless experience to search and book hotels. With a modern and user-friendly interface, our app is designed to provide users with all the necessary information about hotels, including their amenities, location, and availability.
+Welcome to the Transire repository for Miles Home, a room booking app built using Android Studio and Firebase. Our app provides a seamless experience for customers to search and book rooms, view photos and reviews of the facilities and services, and securely make payments.
 
-Our app's core features include a simple and intuitive search interface that allows users to easily find and book hotels based on their preferences. Users can also view hotel details, including photos, reviews, and ratings, to make informed decisions. Additionally, our app features a secure payment gateway that ensures user's data is safe and secure during transactions.
+With a modern and intuitive interface, users can easily browse through the hotel's rooms and amenities, view photos of the available rooms, and read reviews from previous customers. Our app also features Firebase Authentication for secure user login and Firebase Cloud Storage to store images and data, ensuring that users' information is safe and secure.
 
-Built on top of Firebase, our app offers real-time updates on hotel availability and pricing, ensuring that users always have the most up-to-date information at their fingertips. With robust backend infrastructure, our app is also highly scalable, ensuring that it can handle a large number of users and transactions.
+The app is specifically designed for Miles Home, a Philippines based hotel, and is tailored to their unique needs and requirements. Our team has worked closely with Miles Home to create an app that meets their specific needs and exceeds the expectations of their customers.
 
-Whether you're a traveler looking to book your next vacation or a hotel owner looking to expand your business, our hotel booking app is the perfect solution for you. So, feel free to browse our code, contribute to the project, and make your mark in the world of mobile app development.
+Whether you're a traveler looking to book your next stay or a hotel owner looking to expand your business, Transire for Miles Home is the perfect solution for you. Feel free to browse our code, contribute to the project, and join us in building the future of room booking apps.
+
+
+![OT12YV1](https://user-images.githubusercontent.com/73699852/229971020-bab45b27-309d-4c8a-ade7-f3272a06504f.jpg)
